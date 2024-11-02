@@ -16,11 +16,11 @@ const Header = () => {
       return () => window.removeEventListener("scroll", handleScroll);
    }, []);
 
-   const NavLink = ({ title }) => (
+   const NavLink = ({ title, offset }) => (
       <LinkScroll
          onClick={() => setIsOpen(false)}
          to={title}
-         offset={-100}
+         offset={offset || -100}
          spy
          smooth
          activeClass="nav-active"
@@ -41,9 +41,9 @@ const Header = () => {
                   <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
                      <ul className="flex max-lg:block max-lg:px-12">
                         <li className="nav-li">
-                           <NavLink title="features" />
+                           <NavLink title="features" offset={-100} />
                            <div className="dot" />
-                           <NavLink title="pricing" />
+                           <NavLink title="pricing" offset={1} />
                         </li>
                         <li className="nav-logo">
                            <LinkScroll to="hero" offset={-250} spy smooth className={clsx("max-lg:hidden transition-transform duration-500 cursor-pointer")}>
