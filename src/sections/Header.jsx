@@ -53,7 +53,7 @@ const Header = () => {
                         <li className="nav-li">
                            <NavLink title="faq" offset={1} />
                            <div className="dot" />
-                           <NavLink title="download" />
+                           <NavLink title="download" offset={-15} />
                         </li>
                      </ul>
                   </nav>
