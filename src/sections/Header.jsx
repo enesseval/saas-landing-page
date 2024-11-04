@@ -51,7 +51,7 @@ const Header = () => {
                            </LinkScroll>
                         </li>
                         <li className="nav-li">
-                           <NavLink title="faq" />
+                           <NavLink title="faq" offset={1} />
                            <div className="dot" />
                            <NavLink title="download" />
                         </li>
